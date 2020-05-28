@@ -1,0 +1,36 @@
+{% extends "main.html" %}
+
+
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="border border-danger p-4">
+        <form method="POST" action="{% url 'scrapt' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <label>Enter URl</label>
+                <input type="text" class="form-control" name="url_link">
+            </div>
+            <input type="submit" class="btn btn-primary" name="submit" value="submit">
+        </form>
+        </div>
+        <h5 class="text-center text-primary mt-2">"a" tag</h5>
+        {{a_tag}}
+        <h5 class="text-center text-primary mt-2">"p" paragraph tag </h5>
+        {{p_tag}}
+        <h5 class="text-center text-primary mt-2">"img" tag</h5>
+        {{img_tag}}
+        <h5 class="text-center text-primary mt-2">"table" paragraph tag </h5>
+        {{table_tag}}
+        <h5 class="text-center text-primary mt-2">"h1" tag</h5>
+        {{h1_tag}}
+        <h5 class="text-center text-primary mt-2">"h2" paragraph tag </h5>
+        {{h2_tag}}
+        <h5 class="text-center text-primary mt-2">"h3" tag</h5>
+        {{h3_tag}}
+        <h5 class="text-center text-primary mt-2">"h4" paragraph tag </h5>
+        {{h4_tag}}
+        <h5 class="text-center text-primary mt-2">"h5" paragraph tag </h5>
+        {{h5_tag}}
+    </div>
+{% endblock %}

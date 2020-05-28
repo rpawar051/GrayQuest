@@ -1,0 +1,25 @@
+{% extends "main.html" %}
+
+
+
+{% block content %}
+    <div class="container">
+        Admin link <a href="http://127.0.0.1:8000/admin/">click here</a>
+    </div>
+    <table class="table m-4">
+        <tr>
+            <th>Bussiness Name</th>
+            <th>url link</th>
+            <th>Category</th>
+            <th>City</th>
+        </tr>
+        {% for i in output_data %}
+        <tr>
+            <td>{{ i.business_name }}</td>
+            <td>{{ i.web_url }}</td>
+            <td>{{ i.category }}</td>
+            <td>{{ i.city }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

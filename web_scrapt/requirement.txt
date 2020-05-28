@@ -1,0 +1,6 @@
+python => 3.7
+django =>2.2.4
+
+super user :
+user name : admin
+password : admin@123
